@@ -3,6 +3,11 @@ package au.edu.adelaide.sttassignment1;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * STT Assignment 1 application.
+ *
+ * @author Mingxuan Li
+ */
 @SpringBootApplication
 public class SttAssignment1Application {
 

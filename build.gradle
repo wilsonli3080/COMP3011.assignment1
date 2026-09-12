@@ -6,7 +6,7 @@ plugins {
 
 group = 'au.edu.adelaide'
 version = '0.0.1-SNAPSHOT'
-description = 'stt-assignment1'
+description = 'stt-assignment1 — authored by Mingxuan Li'
 
 java {
     toolchain {
