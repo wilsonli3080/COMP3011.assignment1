@@ -1,0 +1,21 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Task :dependencies
+
+------------------------------------------------------------
+Root project 'stt-assignment1'
+------------------------------------------------------------
+
+compileClasspath - Compile classpath for source set 'main'.
+
+> Task :dependencies FAILED
+
+[Incubating] Problems report is available at: file:///Users/weiqin/Library/CloudStorage/OneDrive-Personal/E=MC2/Teaching/GPA/LI%20Mingxuan/COMP_3011%20Cloud%20and%20Concurrent%20Programming/Assignments/a1/stt-assignment1/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+1 actionable task: 1 executed

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>STT Assignment</title>
+  <style>
+    body{font-family:Arial,margin:2rem}
+    #recording{color: red; font-weight:bold}
+    .error {
+      margin: 0.75rem 0;
+      padding: 0.75rem 1rem;
+      color: #8a1f1f;
+      background: #fdecec;
+      border: 1px solid #f5c2c2;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      display: none;
+    }
+    .error:not([hidden]) { display: block; }
+  </style>
+</head>
+<body>
+  <h1>Speech → Text</h1>
+  <button id="start">Start Recording</button>
+  <button id="stop" disabled>Stop</button>
+  <div id="status">Status: <span id="recording">idle</span></div>
+  <div id="error" class="error" aria-live="polite" hidden></div>
+  <h3>Transcription</h3>
+  <pre id="result"></pre>
+
+  <script src="/app.js"></script>
+</body>
+</html>

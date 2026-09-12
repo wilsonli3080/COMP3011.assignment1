@@ -1,0 +1,48 @@
+Initialized native services in: /Users/weiqin/.gradle/native
+Initialized jansi services in: /Users/weiqin/.gradle/native
+The current JVM process isn't compatible with build requirement. The maximum heap size is insufficient.
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Starting process 'Gradle build daemon'. Working directory: /Users/weiqin/.gradle/daemon/9.7.1 Command: /Users/weiqin/Library/Java/JavaVirtualMachines/openjdk-25.0.1/Contents/Home/bin/java --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --enable-native-access=ALL-UNNAMED -XX:MaxMetaspaceSize=384m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp /Users/weiqin/.gradle/wrapper/dists/gradle-9.7.1-bin/1w1c7tv4s851m17nbqdsro2tv/gradle-9.7.1/lib/gradle-daemon-main-9.7.1.jar -javaagent:/Users/weiqin/.gradle/wrapper/dists/gradle-9.7.1-bin/1w1c7tv4s851m17nbqdsro2tv/gradle-9.7.1/lib/agents/gradle-instrumentation-agent-9.7.1.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 9.7.1
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 0.464 secs.
+The client will now receive all logging from the daemon (pid: 51699). The daemon log file: /Users/weiqin/.gradle/daemon/9.7.1/daemon-51699.out.log
+Daemon will be stopped at the end of the build 
+Using 10 worker leases.
+Operational build model parameters: {cachingModelBuilding=false, configurationCache=false, configurationCacheDisabledReason=null, configurationCacheParallelLoad=false, configurationCacheParallelStore=false, configureOnDemand=false, invalidateCoupledProjects=false, isolatedProjects=false, isolatedProjectsDiagnostics=false, isolatedProjectsDangerouslyIgnoreProblems=false, modelAsProjectDependency=false, modelBuilding=false, parallelModelBuilding=false, parallelProjectConfiguration=false, parallelProjectExecution=false, vintage=true}
+Received JVM installation metadata from '/Users/weiqin/Library/Java/JavaVirtualMachines/openjdk-25.0.1/Contents/Home': {JAVA_HOME=/Users/weiqin/Library/Java/JavaVirtualMachines/openjdk-25.0.1/Contents/Home, JAVA_VERSION=25.0.1, JAVA_VENDOR=Oracle Corporation, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=25.0.1+8-27, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=25.0.1+8-27, VM_VENDOR=Oracle Corporation, OS_ARCH=aarch64}
+Watching the file system is configured to be enabled if available
+Now considering [/Users/weiqin/Library/CloudStorage/OneDrive-Personal/E=MC2/Teaching/GPA/LI Mingxuan/COMP_3011 Cloud and Concurrent Programming/Assignments/a1/stt-assignment1] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Users/weiqin/Library/CloudStorage/OneDrive-Personal/E=MC2/Teaching/GPA/LI Mingxuan/COMP_3011 Cloud and Concurrent Programming/Assignments/a1/stt-assignment1/settings.gradle'.
+Projects loaded. Root project using build file '/Users/weiqin/Library/CloudStorage/OneDrive-Personal/E=MC2/Teaching/GPA/LI Mingxuan/COMP_3011 Cloud and Concurrent Programming/Assignments/a1/stt-assignment1/build.gradle'.
+Included projects: [root project 'stt-assignment1']
+
+> Configure project :
+Evaluating root project 'stt-assignment1' using build file '/Users/weiqin/Library/CloudStorage/OneDrive-Personal/E=MC2/Teaching/GPA/LI Mingxuan/COMP_3011 Cloud and Concurrent Programming/Assignments/a1/stt-assignment1/build.gradle'.
+Resolved plugin [id: 'java']
+Resolved plugin [id: 'org.springframework.boot', version: '3.1.4']
+Resolved plugin [id: 'io.spring.dependency-management', version: '1.1.7']
+Applying dependency management to configuration 'annotationProcessor' in project 'stt-assignment1'
+Applying dependency management to configuration 'apiElements' in project 'stt-assignment1'
+Applying dependency management to configuration 'archives' in project 'stt-assignment1'
+Applying dependency management to configuration 'bootArchives' in project 'stt-assignment1'
+Applying dependency management to configuration 'compileClasspath' in project 'stt-assignment1'
+Applying dependency management to configuration 'compileOnly' in project 'stt-assignment1'
+Applying dependency management to configuration 'default' in project 'stt-assignment1'
+Applying dependency management to configuration 'developmentOnly' in project 'stt-assignment1'
+Applying dependency management to configuration 'implementation' in project 'stt-assignment1'
+Applying dependency management to configuration 'mainSourceElements' in project 'stt-assignment1'
+Applying dependency management to configuration 'productionRuntimeClasspath' in project 'stt-assignment1'
+Applying dependency management to configuration 'runtimeClasspath' in project 'stt-assignment1'
+Applying dependency management to configuration 'runtimeElements' in project 'stt-assignment1'
+Applying dependency management to configuration 'runtimeOnly' in project 'stt-assignment1'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'stt-assignment1'
+Applying dependency management to configuration 'testCompileClasspath' in project 'stt-assignment1'
+Applying dependency management to configuration 'testCompileOnly' in project 'stt-assignment1'
+Applying dependency management to configuration 'testImplementation' in project 'stt-assignment1'
+Applying dependency management to configuration 'testResultsElementsForTest' in project 'stt-assignment1'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'stt-assignment1'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'stt-assignment1'
+Watched directory hierarchies: []
