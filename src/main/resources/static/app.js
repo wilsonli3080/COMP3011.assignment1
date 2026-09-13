@@ -22,13 +22,26 @@ startBtn.onclick = async () => {
   clearError();
   resultEl.textContent = '';
 
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-  mediaRecorder = new MediaRecorder(stream);
-  mediaRecorder.ondataavailable = e => chunks.push(e.data);
+  stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus') ? 'audio/webm;codecs=opus' : 'audio/webm';
+  mediaRecorder = new MediaRecorder(stream, { mimeType });
+  chunks = [];
+  mediaRecorder.ondataavailable = e => {
+    if (e.data && e.data.size > 0) chunks.push(e.data);
+  };
   mediaRecorder.onstart = () => { statusEl.textContent = 'recording'; startBtn.disabled = true; stopBtn.disabled = false; };
   mediaRecorder.onstop = async () => {
     statusEl.textContent = 'processing...';
-    const blob = new Blob(chunks, { type: 'audio/webm' });
+    if (chunks.length === 0) {
+      resultEl.textContent = 'Error: no audio data captured.';
+      statusEl.textContent = 'idle';
+      startBtn.disabled = false;
+      stopBtn.disabled = true;
+      if (stream) stream.getTracks().forEach(track => track.stop());
+      return;
+    }
+
+    const blob = new Blob(chunks, { type: mediaRecorder.mimeType || 'audio/webm' });
     chunks = [];
     const fd = new FormData();
     fd.append('file', blob, 'recording.webm');
