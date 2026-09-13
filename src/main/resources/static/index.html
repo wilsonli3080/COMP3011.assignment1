@@ -1,32 +1,38 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>STT Assignment</title>
-  <style>
-    body{font-family:Arial,margin:2rem}
-    #recording{color: red; font-weight:bold}
-    .error {
-      margin: 0.75rem 0;
-      padding: 0.75rem 1rem;
-      color: #8a1f1f;
-      background: #fdecec;
-      border: 1px solid #f5c2c2;
-      border-radius: 6px;
-      white-space: pre-wrap;
-      display: none;
-    }
-    .error:not([hidden]) { display: block; }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Speech → Text (COMP3011)</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <h1>Speech → Text</h1>
-  <button id="start">Start Recording</button>
-  <button id="stop" disabled>Stop</button>
-  <div id="status">Status: <span id="recording">idle</span></div>
-  <div id="error" class="error" aria-live="polite" hidden></div>
-  <h3>Transcription</h3>
-  <pre id="result"></pre>
+  <main class="container">
+    <header class="brand">
+      <h1>Speech → Text</h1>
+      <p class="subtitle">Record from your microphone and get an instant transcription</p>
+    </header>
+
+    <section class="card controls">
+      <div class="controls-row">
+        <button id="start" class="btn btn-primary">Start Recording</button>
+        <button id="stop" class="btn btn-secondary" disabled>Stop</button>
+        <div class="status" aria-live="polite">Status: <span id="recording">idle</span></div>
+      </div>
+      <div id="error" class="error" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="card result">
+      <h2>Transcription</h2>
+      <div id="result" class="result-box" aria-live="polite"></div>
+      <div class="result-actions">
+        <button id="copy" class="btn">Copy</button>
+        <button id="clear" class="btn">Clear</button>
+      </div>
+    </section>
+
+    <footer class="footer">Built for COMP3011 — author: Mingxuan Li</footer>
+  </main>
 
   <script src="/app.js"></script>
 </body>
